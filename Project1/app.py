@@ -6,7 +6,8 @@ def main():
     player_list = Crawler.get_records()
 
     # Database connection
-    myclient = MongoClient("mongodb+srv://admin:admin@cluster0.xos6s.mongodb.net/baza?retryWrites=true&w=majority")
+    myclient = MongoClient("mongodb://localhost/player_list")
+    #myclient = MongoClient("mongodb+srv://admin:admin@cluster0.xos6s.mongodb.net/baza?retryWrites=true&w=majority")
     db = myclient["player_list"]
     collection = db["player_list"]
 
